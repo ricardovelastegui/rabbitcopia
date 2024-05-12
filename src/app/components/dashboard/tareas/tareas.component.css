@@ -1,0 +1,14 @@
+.pointer{
+    cursor: pointer;
+}
+
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+body {
+  background-image: url('../../../../assets/images/teclado2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}

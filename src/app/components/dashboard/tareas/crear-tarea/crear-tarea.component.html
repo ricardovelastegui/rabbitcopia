@@ -1,0 +1,69 @@
+<body>
+    <div class="container">
+        <mat-toolbar>
+            <span>Crear Tarea</span>
+        </mat-toolbar>
+        <mat-card style="margin-top: 10px;" >
+            <form [formGroup]="form" (ngSubmit)="agregarTarea()">
+                <mat-grid-list cols="4" rowHeight="70px">
+    
+                    <mat-grid-tile [colspan]="1"  [rowspan]="1">
+                        <mat-form-field class="ancho">
+                            <mat-label>ID</mat-label>
+                            <input matInput formControlName="id_tarea">
+                          </mat-form-field>
+                    </mat-grid-tile>
+    
+                    <mat-grid-tile [colspan]="3"  [rowspan]="5" >
+                        <img src="./assets/images/Tareas-hero.png" style="width:50% ; height: auto;">
+                    </mat-grid-tile>
+    
+                    <mat-grid-tile [colspan]="1"  [rowspan]="1" >
+                        <mat-form-field class="ancho">
+                            <mat-label>NOMBRE</mat-label>
+                            <input matInput formControlName="nombre">
+                          </mat-form-field>
+                    </mat-grid-tile>
+    
+                    <mat-grid-tile [colspan]="1"  [rowspan]="1">
+                        <mat-form-field class="ancho">
+                            <mat-label>DESCRIPCION</mat-label>
+                            <input matInput formControlName="descripcion">
+                        </mat-form-field>
+                    </mat-grid-tile>
+                
+                    <mat-grid-tile [colspan]="1"  [rowspan]="1" >
+                        <mat-form-field class="ancho">
+                            <mat-label>Estado</mat-label>
+                            <mat-select formControlName="estado">
+                              <mat-option *ngFor="let est of estado" [value]="est">
+                                {{est}}
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </mat-grid-tile>
+    
+                    <mat-grid-tile [colspan]="1" [rowspan]="1" >
+                        <mat-form-field class="ancho">
+                            <mat-label>Importancia</mat-label>
+                            <mat-select formControlName="importancia">
+                              <mat-option *ngFor="let imp of importancia" [value]="imp">
+                                {{imp}}
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </mat-grid-tile>
+    
+                    <mat-grid-tile [colspan]="1"  [rowspan]="1" >
+                        <button mat-raised-button routerLink="/dashboard/tareas" style="margin-right: 20px;">Volver</button>
+                        <button type="submit" [disabled]="form.invalid" mat-raised-button color="primary">Aceptar</button>
+                    </mat-grid-tile>
+                </mat-grid-list>
+    
+                  
+            </form>
+        </mat-card>
+    </div>
+</body>
+
+

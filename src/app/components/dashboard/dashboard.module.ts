@@ -11,6 +11,9 @@ import { UsuariosComponent } from './usuarios/usuarios.component';
 // import {MatToolbarModule} from '@angular/material/toolbar';
 // import {MatIconModule} from '@angular/material/icon';
 import { SharedModule } from '../shared/shared.module';
+import { CrearTareaComponent } from './tareas/crear-tarea/crear-tarea.component';
+import { VerTareaComponent } from './tareas/ver-tarea/ver-tarea.component';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +21,9 @@ import { SharedModule } from '../shared/shared.module';
     InicioComponent,
     NavbarComponent,
     TareasComponent,
-    UsuariosComponent
+    UsuariosComponent,
+    CrearTareaComponent,
+    VerTareaComponent
   ],
   imports: [
     CommonModule,
